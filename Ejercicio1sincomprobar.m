@@ -24,7 +24,7 @@ numClas = max(trlabel)
 arg_3 = arglist{3};
 disp('Loading data 3...');
 tr_dat_test = load(arg_3,'-ascii');
-disp("Data 3 load complete.");
+disp('Data 3 load complete.');
 
 arg_4 = arglist{4};
 disp('Loading data 4...');
