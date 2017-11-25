@@ -1,7 +1,7 @@
 clear
 
-if (nargin!=5)
-	printf("Wrong number of parameters");
+if (nargin~=5)
+	printf('Wrong number of parameters');
 	exit(1);
 endif
 
