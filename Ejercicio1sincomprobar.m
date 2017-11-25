@@ -8,28 +8,28 @@ endif
 %Datos de entrenamiento
 arglist=argv();
 arg_1=arglist{1};
-disp("Loading data 1...");
+disp('Loading data 1...');
 tr_dat = load(arg_1,'-ascii');
-disp("Data 1 load complete.");
+disp('Data 1 load complete.');
 
 arg_2=arglist{2};
-disp("Loading data 2...");
+disp('Loading data 2...');
 trlabel = load(arg_2,'-ascii');
-disp("Data 2 load complete.");
+disp('Data 2 load complete.');
 tr_data = zscore(tr_dat);
 [numVec dim] = size(tr_data);
 numClas = max(trlabel)
 
 %Datos de test
 arg_3 = arglist{3};
-disp("Loading data 3...");
+disp('Loading data 3...');
 tr_dat_test = load(arg_3,'-ascii');
 disp("Data 3 load complete.");
 
 arg_4 = arglist{4};
-disp("Loading data 4...");
+disp('Loading data 4...');
 tr_label_test = load(arg_4,'-ascii');
-disp("Data 4 load complete.");
+disp('Data 4 load complete.');
 tr_data_test = zscore(tr_dat_test);
 
 %Número de gaussianas por mixtura
