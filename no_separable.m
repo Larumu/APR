@@ -2,23 +2,20 @@ clear
 load tr.dat;
 load trlabels.dat;
 
-#entrenamiento de un SVM lineal sin kernel no separable
+#1: SVM lineal sin kernel
 res = svmtrain(trlabels, tr, '-t 0 -c 1000');
 
-# a) multiplicadores de Lagrange
+# a) Multiplicadores de Lagrange
 mult = res.sv_coef;
-# b) indices de los vectores soporte
+# b) Vectores soporte
 indc = res.sv_indices;
-# vectores soporte columnas
 Vec_soport = tr(indc,:)' ;
-# c) vector de pesos (sumatorio de multiplicar cada vector soporte por su alfa correspondiente)
+# c) vector de pesos y umbral de la función discriminante lineal
 O = Vec_soport*mult
-# vector soporte arbitrario
 soport = Vec_soport(:,1);
-# signo de su alfa asociado (clase +-1)
 signo = sign(mult(1));
 umbral = signo - (O'*soport);
-# d) margen optimo es igual a 2 / modulo vector de pesos
+# d) margen correspondiente
 margen = 2/(norm(O));
 
 # frontera lineal de la recta de separación y margenes
