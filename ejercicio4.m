@@ -1,14 +1,12 @@
 clear
-load data/spam/tr.dat;
-load data/spam/trlabels.dat;
-load data/spam/ts.dat;
-load data/spam/tslabels.dat;
+load tr.dat;
+load trlabels.dat;
+load ts.dat;
+load tslabels.dat;
 
-%t=[0 1 2 3];
-%c=[0.00001 0.001 0.01 0.1 1 10 100 1000];
+t=[0 1 2 3];
+c=[0.0001 0.001 0.01 0.1 1 10 100 1000 10000];
 
-t=0;
-c=1000;
 [x y] = size(t);
 [h x] = size(c);
 for i = 1:y
@@ -36,10 +34,3 @@ O = Vec_soport*(res.sv_coef);
 soport = Vec_soport(:,1);
 umbral = sign(res.sv_coef(1)) - (O'*soport);
 margen = 2/(norm(O));
-
-
-
-  xr = reshape(ts,16,16);
-  imshow(xr',[]);
-
- 

@@ -1,11 +1,11 @@
 clear
-load data/usps/tr.dat;
-load data/usps/trlabels.dat;
-load data/usps/ts.dat;
-load data/usps/tslabels.dat;
+load tr.dat;
+load trlabels.dat;
+load ts.dat;
+load tslabels.dat;
 
 t=[0 1 2 3];
-c=[0.00001 0.001 0.01 0.1 1 10 100 1000];
+c=[0.001 0.01 0.1 1 10 100 1000 10000];
 
 [x y] = size(t);
 [h x] = size(c);
@@ -28,7 +28,6 @@ for i = 1:y
     trustrange = [trustrangeleft,trustrangeright]  
   endfor
 endfor
-    
 
-
- 
+xr = reshape(ts,2007,256);
+imshow(xr',[]);
