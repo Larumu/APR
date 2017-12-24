@@ -24,10 +24,9 @@ umbral = signo - (O'*soport);
 # d) margen optimo es igual a 2 / modulo vector de pesos
 margen = 2/(norm(O));
 
-#EJERCICIO 3:
-# frontera lineal de la recta de separación
-	recta=0:1:7; 
-	cent=-(O(1)/O(2))*recta-(umbral/O(2));
+#  3. Frontera lineal de la recta de separaciÃ³n
+recta=0:1:7; 
+cent=-(O(1)/O(2))*recta-(umbral/O(2));
   
 #EJERCICIO 4:
 	plot(
