@@ -19,24 +19,24 @@ umbral = signo - (O'*soport);
 margen = 2/(norm(O));
 
 #3. Frontera lineal de la recta de separación y márgenes asociados
-	recta=0:1:7;
+	recta=0:1:10;
 	Sup=-recta*O(1)/O(2) - (umbral+1)/O(2);
 	cent=-(O(1)/O(2))*recta-(umbral/O(2));
 	Inf=-recta*O(1)/O(2) - (umbral-1)/O(2);
   
-  #calculo de la seta
-  v = [];
-  plotmas = [];
-  plotcruz = [];
+  #Valores tolerancia de margen de cada dato
+  valor = [];
+  mas = [];
+  cruz = [];
   for i = 1:size(res.sv_indices)
-    sig= sign(res.sv_coef(i));
-    seta = 1 - sig*((tr(res.sv_indices(i),:)*O)+umbral);
-    if int32(seta) == 0;
-      v(i) = 0;
-    plotmas = vertcat(plotmas,[tr(res.sv_indices(i),:)]);
+    signo_1= sign(res.sv_coef(i));
+    zeta = 1 - signo_1*((tr(res.sv_indices(i),:)*O)+umbral);
+    if int32(zeta) == 0;
+      valor(i) = 0;
+      mas = vertcat(mas,[tr(res.sv_indices(i),:)]);
     else
-    v(i) = seta;
-    plotcruz = vertcat(plotcruz,[tr(res.sv_indices(i),:)]);
+      valor(i) = zeta;
+      cruz = vertcat(cruz,[tr(res.sv_indices(i),:)]);
     endif
   endfor 
 
