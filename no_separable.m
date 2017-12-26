@@ -40,13 +40,13 @@ margen = 2/(norm(O));
     endif
   endfor 
 
- 	plot(
-	tr(trlabels==1,1),tr(trlabels==1,2),"s",
-	tr(trlabels==2,1),tr(trlabels==2,2),"o",
-  plotmas(:,1),plotmas(:,2),"+k",
-  plotcruz(:,1),plotcruz(:,2),"xk",
-	recta,Sup,"g",recta,cent,"k",recta,Inf,"g")
-	axis([0,7,0,7])
-  title('  + -> vect soport correctos   x -> vec soport fallo c=1000 ')
-  xlabel('Eje_x')
-ylabel('Eje_y')
+ plot(
+ tr(trlabels==1,1),tr(trlabels==1,2),"s",
+ tr(trlabels==2,1),tr(trlabels==2,2),"o",
+ plotmas(:,1),plotmas(:,2),"+k",
+ plotcruz(:,1),plotcruz(:,2),"xk",
+ recta,Sup,"g",recta,cent,"k",recta,Inf,"g")
+ axis([0,7,0,7])
+ title('  + -> vect soport correctos   x -> vec soport fallo c=1000 ')
+ xlabel('Eje_x')
+ ylabel('Eje_y')
