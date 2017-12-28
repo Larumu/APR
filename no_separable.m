@@ -19,7 +19,7 @@ umbral = signo - (O'*soport);
 margen = 2/(norm(O));
 
 #3. Frontera lineal de la recta de separación y márgenes asociados
-	recta=0:1:10;
+	recta=0:1:8;
 	Sup=-recta*O(1)/O(2) - (umbral+1)/O(2);
 	cent=-(O(1)/O(2))*recta-(umbral/O(2));
 	Inf=-recta*O(1)/O(2) - (umbral-1)/O(2);
