@@ -46,7 +46,6 @@ margen = 2/(norm(O));
  plotmas(:,1),plotmas(:,2),"+k",
  plotcruz(:,1),plotcruz(:,2),"xk",
  recta,Sup,"g",recta,cent,"k",recta,Inf,"g")
- axis([0,7,0,7])
- title('  + -> vect soport correctos   x -> vec soport fallo c=1000 ')
+ axis([0,8,0,8])
  xlabel('Eje_x')
  ylabel('Eje_y')
