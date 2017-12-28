@@ -27,8 +27,6 @@ plot(
 trSep(trSeplabels==1,1),trSep(trSeplabels==1,2),"s",
 trSep(trSeplabels==2,1),trSep(trSeplabels==2,2),"o",
 Vec_soport'(:,1),Vec_soport'(:,2),"+k",recta,cent,"g")
-
 axis([0,8,0,8])
-title('cuadrados y circulos = clases    simbolo + = vectores soporte')
 xlabel('Eje X')
 ylabel('Eje Y')
